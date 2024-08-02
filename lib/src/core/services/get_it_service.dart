@@ -1,6 +1,7 @@
 import 'package:get_it/get_it.dart';
 import 'package:linkyou_task/src/core/services/api_service.dart';
 import 'package:linkyou_task/src/core/services/env_service.dart';
+import 'package:linkyou_task/src/core/services/google_sign_in_service.dart';
 
 final getIt = GetIt.instance;
 
@@ -10,6 +11,8 @@ class GetItService {
     await getIt<EnvService>().init();
 
     getIt.registerLazySingleton(() => ApiService(env: getIt()));
+
+    getIt.registerLazySingleton(() => GoogleSignInService());
 
     // getIt.registerLazySingleton(
     //     () => HomeRemoteDataSource(networkService: getIt()));
