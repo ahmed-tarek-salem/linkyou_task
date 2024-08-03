@@ -20,7 +20,7 @@ mixin _$LoginState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() requestLoading,
-    required TResult Function(UserResponseModel user) requestSuccess,
+    required TResult Function(UserRequestModel user) requestSuccess,
     required TResult Function(ErrorResponseModel error) requestError,
   }) =>
       throw _privateConstructorUsedError;
@@ -28,7 +28,7 @@ mixin _$LoginState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? requestLoading,
-    TResult? Function(UserResponseModel user)? requestSuccess,
+    TResult? Function(UserRequestModel user)? requestSuccess,
     TResult? Function(ErrorResponseModel error)? requestError,
   }) =>
       throw _privateConstructorUsedError;
@@ -36,7 +36,7 @@ mixin _$LoginState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? requestLoading,
-    TResult Function(UserResponseModel user)? requestSuccess,
+    TResult Function(UserRequestModel user)? requestSuccess,
     TResult Function(ErrorResponseModel error)? requestError,
     required TResult orElse(),
   }) =>
@@ -126,7 +126,7 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() requestLoading,
-    required TResult Function(UserResponseModel user) requestSuccess,
+    required TResult Function(UserRequestModel user) requestSuccess,
     required TResult Function(ErrorResponseModel error) requestError,
   }) {
     return initial();
@@ -137,7 +137,7 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? requestLoading,
-    TResult? Function(UserResponseModel user)? requestSuccess,
+    TResult? Function(UserRequestModel user)? requestSuccess,
     TResult? Function(ErrorResponseModel error)? requestError,
   }) {
     return initial?.call();
@@ -148,7 +148,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? requestLoading,
-    TResult Function(UserResponseModel user)? requestSuccess,
+    TResult Function(UserRequestModel user)? requestSuccess,
     TResult Function(ErrorResponseModel error)? requestError,
     required TResult orElse(),
   }) {
@@ -240,7 +240,7 @@ class _$RequestLoadingImpl implements _RequestLoading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() requestLoading,
-    required TResult Function(UserResponseModel user) requestSuccess,
+    required TResult Function(UserRequestModel user) requestSuccess,
     required TResult Function(ErrorResponseModel error) requestError,
   }) {
     return requestLoading();
@@ -251,7 +251,7 @@ class _$RequestLoadingImpl implements _RequestLoading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? requestLoading,
-    TResult? Function(UserResponseModel user)? requestSuccess,
+    TResult? Function(UserRequestModel user)? requestSuccess,
     TResult? Function(ErrorResponseModel error)? requestError,
   }) {
     return requestLoading?.call();
@@ -262,7 +262,7 @@ class _$RequestLoadingImpl implements _RequestLoading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? requestLoading,
-    TResult Function(UserResponseModel user)? requestSuccess,
+    TResult Function(UserRequestModel user)? requestSuccess,
     TResult Function(ErrorResponseModel error)? requestError,
     required TResult orElse(),
   }) {
@@ -320,7 +320,7 @@ abstract class _$$RequestSuccessImplCopyWith<$Res> {
           $Res Function(_$RequestSuccessImpl) then) =
       __$$RequestSuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({UserResponseModel user});
+  $Res call({UserRequestModel user});
 }
 
 /// @nodoc
@@ -340,7 +340,7 @@ class __$$RequestSuccessImplCopyWithImpl<$Res>
       null == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
-              as UserResponseModel,
+              as UserRequestModel,
     ));
   }
 }
@@ -351,7 +351,7 @@ class _$RequestSuccessImpl implements _RequestSuccess {
   const _$RequestSuccessImpl(this.user);
 
   @override
-  final UserResponseModel user;
+  final UserRequestModel user;
 
   @override
   String toString() {
@@ -381,7 +381,7 @@ class _$RequestSuccessImpl implements _RequestSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() requestLoading,
-    required TResult Function(UserResponseModel user) requestSuccess,
+    required TResult Function(UserRequestModel user) requestSuccess,
     required TResult Function(ErrorResponseModel error) requestError,
   }) {
     return requestSuccess(user);
@@ -392,7 +392,7 @@ class _$RequestSuccessImpl implements _RequestSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? requestLoading,
-    TResult? Function(UserResponseModel user)? requestSuccess,
+    TResult? Function(UserRequestModel user)? requestSuccess,
     TResult? Function(ErrorResponseModel error)? requestError,
   }) {
     return requestSuccess?.call(user);
@@ -403,7 +403,7 @@ class _$RequestSuccessImpl implements _RequestSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? requestLoading,
-    TResult Function(UserResponseModel user)? requestSuccess,
+    TResult Function(UserRequestModel user)? requestSuccess,
     TResult Function(ErrorResponseModel error)? requestError,
     required TResult orElse(),
   }) {
@@ -452,10 +452,10 @@ class _$RequestSuccessImpl implements _RequestSuccess {
 }
 
 abstract class _RequestSuccess implements LoginState {
-  const factory _RequestSuccess(final UserResponseModel user) =
+  const factory _RequestSuccess(final UserRequestModel user) =
       _$RequestSuccessImpl;
 
-  UserResponseModel get user;
+  UserRequestModel get user;
   @JsonKey(ignore: true)
   _$$RequestSuccessImplCopyWith<_$RequestSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -527,7 +527,7 @@ class _$RequestErrorImpl implements _RequestError {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() requestLoading,
-    required TResult Function(UserResponseModel user) requestSuccess,
+    required TResult Function(UserRequestModel user) requestSuccess,
     required TResult Function(ErrorResponseModel error) requestError,
   }) {
     return requestError(error);
@@ -538,7 +538,7 @@ class _$RequestErrorImpl implements _RequestError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? requestLoading,
-    TResult? Function(UserResponseModel user)? requestSuccess,
+    TResult? Function(UserRequestModel user)? requestSuccess,
     TResult? Function(ErrorResponseModel error)? requestError,
   }) {
     return requestError?.call(error);
@@ -549,7 +549,7 @@ class _$RequestErrorImpl implements _RequestError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? requestLoading,
-    TResult Function(UserResponseModel user)? requestSuccess,
+    TResult Function(UserRequestModel user)? requestSuccess,
     TResult Function(ErrorResponseModel error)? requestError,
     required TResult orElse(),
   }) {

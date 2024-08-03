@@ -7,7 +7,7 @@ extension PaginationExtenstion<T> on PagingController<int, T> {
     try {
       final data = await func() ?? [];
 
-      if (data.length < 15) {
+      if (data.length < 10) {
         appendLastPage(data);
         return;
       }

@@ -4,7 +4,7 @@ part of 'login_cubit.dart';
 abstract class LoginState with _$LoginState {
   const factory LoginState.initial() = _Initial;
   const factory LoginState.requestLoading() = _RequestLoading;
-  const factory LoginState.requestSuccess(UserResponseModel user) =
+  const factory LoginState.requestSuccess(UserRequestModel user) =
       _RequestSuccess;
   const factory LoginState.requestError(ErrorResponseModel error) =
       _RequestError;

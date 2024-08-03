@@ -1,7 +1,7 @@
 import 'package:linkyou_task/src/application/data/models/request_models/pagination_request_model.dart';
 import 'package:linkyou_task/src/application/data/models/response_models/error_response_model.dart';
-import 'package:linkyou_task/src/application/data/models/response_models/user_response_model.dart';
 import 'package:linkyou_task/src/core/services/api_service.dart';
+import 'package:linkyou_task/src/features/users_list/data/models/user_response_model.dart';
 
 abstract class UsersListDataSourceInterface {
   Future<List<UserResponseModel>> getUsersList(

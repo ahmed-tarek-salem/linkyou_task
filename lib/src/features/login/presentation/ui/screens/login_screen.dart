@@ -13,7 +13,6 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cubit = context.read<LoginCubit>();
     return Scaffold(
       appBar: AppBar(
         title: const Text("Login"),
@@ -24,26 +23,39 @@ class LoginScreen extends StatelessWidget {
           state.maybeWhen(
             requestLoading: SmartDialog.showLoading,
             requestSuccess: (data) {
-              print(data);
               SmartDialog.dismiss();
               context.goNamed(AppRoutes.usersList.name);
             },
-            requestError: (error) => SmartDialog.showToast(error.message),
+            requestError: (error) {
+              SmartDialog.dismiss();
+              SmartDialog.showToast(error.message);
+            },
             orElse: () {},
           );
         },
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Center(
-                child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        fixedSize: const Size(double.infinity, 40)),
-                    onPressed: () async {
-                      context.read<LoginCubit>().loginWithGoogle();
-                    },
-                    child: const Text("Sign in with google")))
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Center(
+                  child: ElevatedButton.icon(
+                icon:
+                    Image.asset('assets/images/google_logo.png', height: 40.0),
+                label: const Text('Sign in with Google'),
+                onPressed: context.read<LoginCubit>().loginWithGoogle,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  foregroundColor: Colors.black,
+                  minimumSize: const Size(double.infinity, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5.0),
+                  ),
+                  textStyle: const TextStyle(fontSize: 18.0),
+                ),
+              ))
+            ],
+          ),
         ),
       ),
     );
