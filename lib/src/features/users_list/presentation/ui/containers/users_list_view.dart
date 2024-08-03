@@ -11,7 +11,8 @@ class _UsersListViewContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PagedListView.separated(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
+        padding: const EdgeInsets.symmetric(
+            horizontal: AppConstants.defaultHorizontalPadding),
         pagingController: cubit.users,
         builderDelegate: PagedChildBuilderDelegate<UserResponseModel>(
             animateTransitions: true,

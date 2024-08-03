@@ -16,16 +16,7 @@ class GetItService {
   static init() async {
     getIt.registerLazySingleton(() => EnvService());
     await getIt<EnvService>().init();
-
     getIt.registerLazySingleton(() => ApiService(env: getIt()));
-
-    getIt.registerLazySingleton(() => GoogleSignInService());
-
-    // getIt.registerLazySingleton(
-    //     () => LoginRemoteDataSource(apiService: getIt()));
-    // getIt.registerLazySingleton(
-    //     () => LoginRepo(dataSource: getIt<LoginRemoteDataSource>()));
-    // getIt.registerLazySingleton(() => LoginCubit(repo: getIt<LoginRepo>()));
 
     getIt.registerLazySingleton<LoginDataSourceInterface>(
         () => LoginRemoteDataSource(apiService: getIt()));

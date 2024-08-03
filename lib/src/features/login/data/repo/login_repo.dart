@@ -1,4 +1,4 @@
-import 'package:linkyou_task/src/application/data/models/request_models/user_resquest_model.dart';
+import 'package:linkyou_task/src/features/login/data/models/user_resquest_model.dart';
 import 'package:linkyou_task/src/application/data/models/response_models/error_response_model.dart';
 import 'package:linkyou_task/src/features/login/data/data_sources/login_data_source_interface.dart';
 

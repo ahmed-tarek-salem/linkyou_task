@@ -21,4 +21,9 @@ class UserResponseModel {
         lastName: json["last_name"],
         avatar: json["avatar"],
       );
+
+  @override
+  String toString() {
+    return 'UserResponseModel(id: $id, email: $email, firstName: $firstName, lastName: $lastName, avatar: $avatar)';
+  }
 }
