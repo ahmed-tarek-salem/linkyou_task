@@ -24,7 +24,6 @@ class UsersListRemoteDataSource implements UsersListDataSourceInterface {
           .map<UserResponseModel>((e) => UserResponseModel.fromJson(e))
           .toList();
     } catch (e) {
-      print("The error is here");
       throw ErrorHandler.handleError(e);
     }
   }

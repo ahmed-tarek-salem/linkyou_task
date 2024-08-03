@@ -1,9 +1,7 @@
 part of '../screens/login_screen.dart';
 
 class _LoginBodyContainer extends StatelessWidget {
-  const _LoginBodyContainer({
-    super.key,
-  });
+  const _LoginBodyContainer();
 
   @override
   Widget build(BuildContext context) {

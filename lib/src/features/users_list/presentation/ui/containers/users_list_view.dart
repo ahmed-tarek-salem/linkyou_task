@@ -2,7 +2,6 @@ part of '../screens/users_list_screen.dart';
 
 class _UsersListViewContainer extends StatelessWidget {
   const _UsersListViewContainer({
-    super.key,
     required this.cubit,
   });
 

@@ -1,7 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:linkyou_task/src/core/services/api_service.dart';
 import 'package:linkyou_task/src/core/services/env_service.dart';
-import 'package:linkyou_task/src/core/services/google_sign_in_service.dart';
 import 'package:linkyou_task/src/features/login/data/data_sources/login_data_source_interface.dart';
 import 'package:linkyou_task/src/features/login/data/data_sources/login_remote_data_source.dart';
 import 'package:linkyou_task/src/features/login/data/repo/login_repo.dart';
