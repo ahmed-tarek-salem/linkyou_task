@@ -1,7 +1,3 @@
-I understand! Here's the revised section that addresses the lack of tests in a more suitable manner:
-
----
-
 # Linkyou Task
 
 ## Overview
