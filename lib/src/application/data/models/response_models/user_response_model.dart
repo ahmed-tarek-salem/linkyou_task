@@ -1,7 +1,7 @@
 class UserResponseModel {
   final String? name;
   final String? job;
-  final String? id;
+  final int? id;
   final DateTime? createdAt;
   final String? email;
 
@@ -16,7 +16,7 @@ class UserResponseModel {
   UserResponseModel copyWith({
     String? name,
     String? job,
-    String? id,
+    int? id,
     DateTime? createdAt,
     String? email,
   }) =>
